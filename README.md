@@ -1,91 +1,34 @@
 # Unit Converter
 
-Aplicacao web desenvolvida com React e Vite para converter unidades de comprimento, peso e temperatura de forma rapida e simples. O projeto foi criado como uma ferramenta de estudo para praticar componentes, rotas, estado local e organizacao de logica reutilizavel em JavaScript.
+Uma aplicacao web feita com React e Vite para converter unidades de comprimento, peso e temperatura de forma simples, rapida e direta. O projeto foi desenvolvido para praticar componentes, rotas, estado local e reaproveitamento de logica em JavaScript.
 
-## Sobre o projeto
+## 🚀 Comecando
 
-Este projeto foi construido como uma aplicacao front-end com foco em praticar:
+Essas instrucoes vao te ajudar a rodar o projeto na sua maquina local para desenvolvimento e teste.
 
-- Estruturacao de componentes em React
-- Organizacao de rotas com React Router DOM
-- Gerenciamento de estado com `useState`
-- Reutilizacao de logica em funcoes auxiliares
-- Separacao entre interface e regra de conversao
-- Validacao basica de entrada de dados em formularios
-- Criacao de uma interface simples, funcional e direta
+Consulte **[Implantacao](#-implantacao)** para ver a versao publicada.
 
-Apesar de ser um projeto pequeno, ele ja segue uma estrutura clara, separando as telas de conversao da logica que executa os calculos.
+### 📋 Pre-requisitos
 
-## Funcionalidades
-
-- Conversao de unidades de comprimento
-- Conversao de unidades de peso
-- Conversao de unidades de temperatura
-- Navegacao entre telas com menu superior
-- Redirecionamento automatico da rota raiz para `length`
-- Exibicao do resultado da conversao em tela dedicada
-- Botao para limpar os campos e refazer a conversao
-- Estrutura reutilizavel para facilitar novas conversoes no futuro
-
-## Conversoes disponiveis
-
-O projeto atualmente suporta as seguintes categorias:
-
-- `Length`
-- `Weight`
-- `Temperature`
-
-### Unidades de comprimento
-
-- `millimeter`
-- `centimeter`
-- `meter`
-- `kilometer`
-- `inch`
-- `foot`
-- `yard`
-- `mile`
-
-### Unidades de peso
-
-- `milligram`
-- `gram`
-- `kilogram`
-- `ounce`
-- `pound`
-
-### Unidades de temperatura
-
-- `celsius`
-- `fahrenheit`
-- `kelvin`
-
-## Tecnologias utilizadas
-
-- React
-- Vite
-- JavaScript
-- React Router DOM
-
-## Requisitos
-
-Para executar o projeto localmente, voce precisa ter instalado:
-
-- [Node.js](https://nodejs.org/)
-- npm
-
-## Como executar o projeto
-
-1. Clone este repositorio:
+Voce vai precisar de:
 
 ```bash
-git clone https://github.com/seu-usuario/unit-converter.git
+Node.js
+npm
+```
+
+### 🔧 Instalacao
+
+1. Clone o repositorio:
+
+```bash
+git clone https://github.com/luanevangelista/Unit-Converter.git
 ```
 
 2. Acesse a pasta do projeto:
 
 ```bash
-cd unit-converter/UnitConverter
+cd Unit-Converter/UnitConverter
 ```
 
 3. Instale as dependencias:
@@ -94,161 +37,74 @@ cd unit-converter/UnitConverter
 npm install
 ```
 
-4. Execute a aplicacao em modo desenvolvimento:
+4. Inicie a aplicacao em modo desenvolvimento:
 
 ```bash
 npm run dev
 ```
 
-Se preferir, voce tambem pode gerar a versao de producao:
+5. Se quiser gerar a versao de producao:
 
 ```bash
 npm run build
 ```
 
-E, depois, visualizar o build localmente:
+6. Para testar o build localmente:
 
 ```bash
 npm run preview
 ```
 
-## Como usar
+## ⚙️ Executando os testes
 
-1. Ao abrir a aplicacao, voce sera direcionado automaticamente para a tela de conversao de comprimento.
-2. Use o menu superior para alternar entre comprimento, peso e temperatura.
-3. Escolha a unidade de origem e a unidade de destino.
-4. Digite um valor numerico no campo correspondente.
-5. Clique em `Convert` para ver o resultado.
-6. Caso queira refazer a operacao, use o botao `Reset`.
+Este projeto nao possui testes automatizados configurados no momento.
 
-## Exemplo de fluxo
+Como validacao basica, voce pode usar:
 
-```text
-Unit Converter
+### 🔩 Analise dos testes de ponta a ponta
 
-Length converter
-Select the units and enter a value to convert.
+Nao ha uma suite E2E configurada ainda, mas voce pode conferir o fluxo principal abrindo a aplicacao, escolhendo as unidades e fazendo uma conversao.
 
-Value: 10
-Convert from: Meter
-Convert to: Kilometer
-
-Result:
-10 meter = 0.01 kilometer
+```bash
+npm run dev
 ```
 
-## Estrutura do projeto
+### ⌨️ Testes de estilo de codificacao
 
-```text
-Unit-Converter/
-|-- README.md
-`-- UnitConverter/
-    |-- public/
-    |   |-- favicon.svg
-    |   `-- icons.svg
-    |-- src/
-    |   |-- components/
-    |   |   `-- Navbar.jsx
-    |   |-- pages/
-    |   |   |-- Length.jsx
-    |   |   |-- Weight.jsx
-    |   |   `-- Temperature.jsx
-    |   |-- utils/
-    |   |   `-- converters.jsx
-    |   |-- App.jsx
-    |   |-- App.css
-    |   |-- index.css
-    |   `-- main.jsx
-    |-- package.json
-    `-- vite.config.js
+O projeto usa ESLint para validar o codigo e ajudar a manter um padrao consistente.
+
+```bash
+npm run lint
 ```
 
-## Organizacao das responsabilidades
+Tambem e possivel conferir se o build esta funcionando corretamente:
 
-### `src/main.jsx`
+```bash
+npm run build
+```
 
-Ponto de entrada da aplicacao. Responsavel por montar a arvore principal do React e carregar os estilos globais.
+## 📦 Implantacao
 
-### `src/App.jsx`
+O projeto esta publicado no GitHub Pages e pode ser testado aqui:
 
-Responsavel pela estrutura geral da aplicacao:
+https://luanevangelista.github.io/Unit-Converter/#/length
 
-- cria o roteamento
-- exibe o titulo da pagina
-- redireciona a rota inicial para `length`
-- controla quais telas podem ser acessadas
+A navegacao usa `HashRouter`, entao a rota principal para testar a conversao de comprimento e:
 
-### `src/components/Navbar.jsx`
+`https://luanevangelista.github.io/Unit-Converter/#/length`
 
-Centraliza a navegacao entre as categorias disponiveis:
+## 🛠️ Construido com
 
-- Length
-- Weight
-- Temperature
+Ferramentas e bibliotecas usadas no projeto:
 
-### `src/pages/Length.jsx`
+* [React](https://react.dev/) - Biblioteca principal da interface
+* [Vite](https://vite.dev/) - Ambiente de desenvolvimento e build
+* [React Router DOM](https://reactrouter.com/) - Rotas da aplicacao
+* JavaScript - Logica da aplicacao
 
-Tela responsavel pela conversao de unidades de comprimento.
+## ✒️ Autores
 
-### `src/pages/Weight.jsx`
-
-Tela responsavel pela conversao de unidades de peso.
-
-### `src/pages/Temperature.jsx`
-
-Tela responsavel pela conversao de unidades de temperatura.
-
-### `src/utils/converters.jsx`
-
-Arquivo que concentra a logica reutilizavel de conversao:
-
-- fatores de conversao para comprimento
-- fatores de conversao para peso
-- funcao generica para converter unidades com base em fatores
-- funcao especifica para converter temperatura
-
-## Como funciona a conversao
-
-### Comprimento e peso
-
-As conversoes de comprimento e peso usam uma estrategia semelhante:
-
-1. O valor digitado e convertido para a unidade base.
-2. Em seguida, esse valor e convertido para a unidade de destino.
-3. O resultado final e exibido na tela.
-
-### Temperatura
-
-A conversao de temperatura usa a escala Celsius como ponto intermediario:
-
-1. O valor de origem e convertido para Celsius.
-2. Depois, o valor em Celsius e convertido para a unidade desejada.
-
-## Melhorias futuras
-
-Algumas ideias para evoluir o projeto:
-
-- Adicionar mais categorias de conversao
-- Permitir troca rapida entre unidade de origem e destino
-- Exibir historico das ultimas conversoes
-- Melhorar o layout com uma identidade visual mais marcante
-- Adicionar validacao visual para entradas invalidas
-
-## Aprendizados que este projeto pratica
-
-Este projeto e uma boa oportunidade para reforcar conceitos importantes de desenvolvimento front-end com React, como:
-
-- composicao de componentes
-- navegacao com rotas
-- gerenciamento de estado
-- reutilizacao de funcoes utilitarias
-- organizacao de telas por responsabilidade
-- tratamento de formularios
-- estruturacao de uma aplicacao com Vite
-
-## Autor
-
-Projeto desenvolvido para fins de estudo e pratica com React, JavaScript e Vite.
+* **Luan Evangelista** - Desenvolvimento e manutencao do projeto
 
 ## Referencia do desafio
 
