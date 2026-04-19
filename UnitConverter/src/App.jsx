@@ -1,5 +1,5 @@
 // Router
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 import Length from "./pages/Length";
 import Weight from "./pages/Weight";
 import Temperature from "./pages/Temperature";
@@ -9,7 +9,7 @@ import "./App.css";
 
 function App() {
   return (
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    <HashRouter>
       <div className="container">
         <h1>Unit Converter</h1>
 
@@ -21,7 +21,7 @@ function App() {
           <Route path="*" element={<Navigate to="/length" replace />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
